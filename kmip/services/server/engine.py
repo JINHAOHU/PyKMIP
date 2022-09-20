@@ -2955,6 +2955,8 @@ class KmipEngine(object):
             auth_tag_length=cryptographic_parameters.tag_length
         )
 
+        print('auth_tag in payload is {0}'.format(result.get('auth_tag')))
+
         response_payload = payloads.EncryptResponsePayload(
             unique_identifier,
             result.get('cipher_text'),

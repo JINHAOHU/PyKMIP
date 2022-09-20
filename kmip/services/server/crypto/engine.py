@@ -462,6 +462,7 @@ class CryptographyEngine(api.CryptographicEngine):
             )
 
         is_gcm_mode = cipher_mode == enums.BlockCipherMode.GCM
+        print('is gcm mode? {0}'.format(is_gcm_mode))
         if not is_gcm_mode and auth_additional_data is not None:
             raise exceptions.InvalidField(
                 'Authenticated encryption additional data is supported '
@@ -522,6 +523,7 @@ class CryptographyEngine(api.CryptographicEngine):
             result['iv_nonce'] = iv_nonce
         if is_gcm_mode:
             result['auth_tag'] = encryptor.tag[:auth_tag_length]
+            print('auth_tag is {0}'.format(result['auth_tag']))
         return result
 
     def _encrypt_asymmetric(self,
