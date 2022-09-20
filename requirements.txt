@@ -1,5 +1,5 @@
 cryptography>=1.4
-enum-compat
+enum34; python_version < '3.4'
 requests
 six>=1.11.0
 sqlalchemy>=1.0

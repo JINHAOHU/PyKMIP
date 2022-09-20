@@ -52,7 +52,7 @@ setuptools.setup(
     },
     install_requires=[
         "cryptography",
-        "enum-compat",
+        'enum34; python_version < "3.4"',
         "requests",
         "six",
         "sqlalchemy"
