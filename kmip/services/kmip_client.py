@@ -997,6 +997,7 @@ class KMIPProxy(object):
         """
         operation = Operation(OperationEnum.DECRYPT)
 
+        print('auth_tag is {0}'.format(auth_tag))
         request_payload = payloads.DecryptRequestPayload(
             unique_identifier=unique_identifier,
             data=data,

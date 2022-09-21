@@ -1403,6 +1403,7 @@ class ProxyKmipClient(object):
             if not isinstance(auth_additional_data, six.binary_type):
                 raise TypeError("auth_additional_data must be bytes")
         if auth_tag is not None:
+            print('auth_tag is not None!!!')
             if not isinstance(auth_tag, six.binary_type):
                 raise TypeError("auth_tag must be bytes")
 

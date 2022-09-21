@@ -721,6 +721,7 @@ class CryptographyEngine(api.CryptographicEngine):
         if decryption_algorithm is None:
             raise exceptions.InvalidField("Decryption algorithm is required.")
 
+        print('auth_tag is {0}'.format(auth_tag))
         if decryption_algorithm == enums.CryptographicAlgorithm.RSA:
             return self._decrypt_asymmetric(
                 decryption_algorithm,
